@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+<body>
+  <h2>Displaying XML Using HTML </h2>
+  <table border="2">
+    <tr>
+      <th style="text-align:left">NAME</th>
+      <th style="text-align:left">ID</th>
+      <th style="text-align:left">Phone</th>
+      <th style="text-align:left">CNIC</th>
+      <th style="text-align:left">Email</th>
+      <th style="text-align:left">University</th>
+    </tr>
+    <xsl:for-each select="catalog/cd">
+    <tr>
+      <td><xsl:value-of select="NAME"/>Junaid Ur Rahman</td>
+      <td><xsl:value-of select="ID"/>17896</td>
+      <td><xsl:value-of select="Phone"/>03473799733</td>
+      <td><xsl:value-of select="CNIC"/>15302-3693803-9</td>
+      <td><xsl:value-of select="Email"/><a href="junaidurrahman840@gmail.com">junaidurrahman840@gmail.com</a></td>
+      <td><xsl:value-of select="University"/>INU Peshawar</td>
+      
+    </tr>
+    </xsl:for-each>
+  </table>
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet> 
